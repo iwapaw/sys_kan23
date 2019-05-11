@@ -1,0 +1,9 @@
+------------------ Kanban request example -------------------
+
+GET /api/v1/task/1 HTTP/1.1
+Host: localhost:49956
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRicm93biIsImdpdmVuX25hbWUiOiJEYW4iLCJmYW1pbHlfbmFtZSI6IkJyb3duIiwicm9sZSI6WyJBZG1pbiIsIlN1cGVyVXNlciIsIlVzZXIiXSwiaXNzIjoiV1NUSSIsImF1ZCI6Imh0dHA6Ly93c3RpLnBsIiwiZXhwIjoxODE3NzUxNzUzLCJuYmYiOjE1MDIyMTg5NTN9.xpHvDG5Qprc0WnwWXzxkz478ey-bV6bp5p7sfKw0i0U
+
+-------------------------------------------------------------
+
+Authorization: Basic ZGJyb3duOmlnbm9yZWQ=
