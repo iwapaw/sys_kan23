@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProcessing\IUserByIdDataProcessor.cs" />
     <Compile Include="PagedDataRequest.cs" />
-    <Compile Include="DataProcessing\IAllTasksDataProcessor.cs" />
     <Compile Include="DataProcessing\ITaskByIdDataProcessor.cs" />
     <Compile Include="Entities\IVersionedEntity.cs" />
     <Compile Include="Entities\Status.cs" />
@@ -50,9 +50,6 @@
     <Compile Include="Exceptions\ChildObjectNotFoundException.cs" />
     <Compile Include="Exceptions\RootObjectNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataProcessing\IAddTaskDataProcessor.cs" />
-    <Compile Include="DataProcessing\IUpdateTaskDataProcessor.cs" />
-    <Compile Include="DataProcessing\IUpdateTaskStatusDataProcessor.cs" />
     <Compile Include="QueryResult.cs" />
     <Compile Include="ResultsPagingUtility.cs" />
   </ItemGroup>
