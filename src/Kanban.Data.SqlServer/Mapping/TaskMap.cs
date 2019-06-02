@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FluentNHibernate.Mapping;
+﻿using FluentNHibernate.Mapping;
 using Kanban.Data.Entities;
 
 namespace Kanban.Data.SqlServer.Mapping
 {
-    public class TaskMap : VersionedClassMap<Task>
+	public class TaskMap : VersionedClassMap<Task>
     {
         public TaskMap()
         {

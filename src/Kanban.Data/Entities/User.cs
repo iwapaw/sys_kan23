@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Kanban.Data.Entities
+﻿namespace Kanban.Data.Entities
 {
-    public class User : IVersionedEntity
+	public class User : IVersionedEntity
     {
         public virtual long UserId { get; set; }
         public virtual string Firstname { get; set; }

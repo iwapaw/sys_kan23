@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using AutoMapper;
+﻿using AutoMapper;
 using Kanban.Common.TypeMapping;
 using Kanban.Data.Entities;
 
 namespace Kanban.Web.Api.AutoMappingConfiguration
 {
-    public class UserEntityToUserAutoMapperTypeConfigurator : IAutoMapperTypeConfigurator
+	public class UserEntityToUserAutoMapperTypeConfigurator : IAutoMapperTypeConfigurator
     {
         public void Configure()
         {

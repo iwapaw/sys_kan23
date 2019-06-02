@@ -193,9 +193,12 @@
     <Compile Include="AutoMappingConfiguration\TaskEntityToTaskAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
+    <Compile Include="Controllers\V1\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="InquiryProcessing\IUserByIdInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\UserByIdInquiryProcessor.cs" />
     <Compile Include="LinkServices\CommonLinkService.cs" />
     <Compile Include="LinkServices\ICommonLinkService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,8 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\V1\" />
-    <Folder Include="InquiryProcessing\" />
     <Folder Include="MaintenanceProcessing\" />
   </ItemGroup>
   <ItemGroup>
@@ -260,7 +261,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49956</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49956/</IISUrl>
+          <IISUrl>http://localhost:59999</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

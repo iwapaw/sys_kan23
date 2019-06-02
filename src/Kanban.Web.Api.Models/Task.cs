@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Kanban.Web.Api.Models
 {
-    public class Task : ILinkContaining
+	public class Task : ILinkContaining
     {
         private List<Link> _links;
         private bool _shouldSerializeAssignees;

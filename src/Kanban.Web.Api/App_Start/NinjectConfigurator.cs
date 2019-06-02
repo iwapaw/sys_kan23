@@ -4,8 +4,11 @@ using Kanban.Common;
 using Kanban.Common.Logging;
 using Kanban.Common.Security;
 using Kanban.Common.TypeMapping;
+using Kanban.Data.DataProcessing;
+using Kanban.Data.SqlServer.DataProcessing;
 using Kanban.Data.SqlServer.Mapping;
 using Kanban.Web.Api.AutoMappingConfiguration;
+using Kanban.Web.Api.InquiryProcessing;
 using Kanban.Web.Api.LinkServices;
 using Kanban.Web.Api.Security;
 using Kanban.Web.Common;
@@ -37,7 +40,10 @@ namespace Kanban.Web.Api.App_Start
             container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
             container.Bind<IUpdateablePropertyDetector>().To<JObjectUpdateablePropertyDetector>().InSingletonScope();
             container.Bind<ICommonLinkService>().To<CommonLinkService>().InRequestScope();
-        }
+
+			container.Bind<IUserByIdDataProcessor>().To<UserByIdDataProcessor>().InRequestScope();
+			container.Bind<IUserByIdInquiryProcessor>().To<UserByIdInquiryProcessor>().InRequestScope();
+		}
 
         private void ConfigureLog4net(IKernel container)
         {

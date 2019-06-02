@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using AutoMapper;
+﻿using AutoMapper;
 using Kanban.Common.TypeMapping;
 using Kanban.Data.Entities;
 using Kanban.Web.Common;
+using System.Collections.Generic;
+using System.Linq;
 using User = Kanban.Web.Api.Models.User;
 
 namespace Kanban.Web.Api.AutoMappingConfiguration
 {
-    public class TaskAssigneesResolver : ValueResolver<Task, List<User>>
+	public class TaskAssigneesResolver : ValueResolver<Task, List<User>>
     {
         public IAutoMapper AutoMapper
         {

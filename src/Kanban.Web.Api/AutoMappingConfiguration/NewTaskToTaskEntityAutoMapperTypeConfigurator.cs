@@ -4,7 +4,7 @@ using Kanban.Web.Api.Models;
 
 namespace Kanban.Web.Api.AutoMappingConfiguration
 {
-    public class NewTaskToTaskEntityAutoMapperTypeConfigurator : IAutoMapperTypeConfigurator
+	public class NewTaskToTaskEntityAutoMapperTypeConfigurator : IAutoMapperTypeConfigurator
     {
         public void Configure()
         {

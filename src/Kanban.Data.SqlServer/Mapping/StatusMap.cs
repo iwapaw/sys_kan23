@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Kanban.Data.Entities;
+﻿using Kanban.Data.Entities;
 
 namespace Kanban.Data.SqlServer.Mapping
 {
-    public class StatusMap : VersionedClassMap<Status>
+	public class StatusMap : VersionedClassMap<Status>
     {
         public StatusMap()
         {

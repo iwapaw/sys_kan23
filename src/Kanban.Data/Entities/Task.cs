@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kanban.Data.Entities
 {
-    public class Task : IVersionedEntity
+	public class Task : IVersionedEntity
     {
         private readonly IList<User> _users = new List<User>();
 

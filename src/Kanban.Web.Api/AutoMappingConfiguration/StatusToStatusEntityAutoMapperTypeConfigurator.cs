@@ -4,7 +4,7 @@ using Kanban.Web.Api.Models;
 
 namespace Kanban.Web.Api.AutoMappingConfiguration
 {
-    public class StatusToStatusEntityAutoMapperTypeConfigurator : IAutoMapperTypeConfigurator
+	public class StatusToStatusEntityAutoMapperTypeConfigurator : IAutoMapperTypeConfigurator
     {
         public void Configure()
         {
