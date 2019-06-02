@@ -16,9 +16,7 @@ using Kanban.Web.Common.Security;
 using log4net.Config;
 using NHibernate;
 using NHibernate.Context;
-using Ninject;
-using Ninject.Activation;
-using Ninject.Web.Common;
+using nin
 
 namespace Kanban.Web.Api.App_Start
 {
@@ -38,12 +36,11 @@ namespace Kanban.Web.Api.App_Start
 
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
             container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
+            container.Bind<ITaskByIdDataProcessor>().To<TaskByIdDataProcessor>().InRequestScope();
+            container.Bind<ITaskByIdInquiryProcessor>().To<TaskByIdInquiryProcessor>().InRequestScope();
             container.Bind<IUpdateablePropertyDetector>().To<JObjectUpdateablePropertyDetector>().InSingletonScope();
             container.Bind<ICommonLinkService>().To<CommonLinkService>().InRequestScope();
-
-			container.Bind<IUserByIdDataProcessor>().To<UserByIdDataProcessor>().InRequestScope();
-			container.Bind<IUserByIdInquiryProcessor>().To<UserByIdInquiryProcessor>().InRequestScope();
-		}
+        }
 
         private void ConfigureLog4net(IKernel container)
         {

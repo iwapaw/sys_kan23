@@ -2,8 +2,8 @@
 
 namespace Kanban.Web.Api.InquiryProcessing
 {
-	public interface ITaskByIdInquiryProcessor
-	{
-		Task GetTask(long id);
-	}
+    public interface ITaskByIdInquiryProcessor
+    {
+        Task GetTask(long taskId);
+    }
 }

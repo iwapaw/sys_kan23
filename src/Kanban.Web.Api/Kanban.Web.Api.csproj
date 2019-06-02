@@ -113,14 +113,6 @@
       <HintPath>..\..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ninject.Web.Common">
-      <HintPath>..\..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.IdentityModel.Tokens.Jwt">
       <HintPath>..\..\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
@@ -193,14 +185,39 @@
     <Compile Include="AutoMappingConfiguration\TaskEntityToTaskAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
-    <Compile Include="Controllers\V1\UsersController.cs" />
+    <Compile Include="Controllers\V1\TasksController.cs" />
+    <Compile Include="Controllers\V1\TaskUsersController.cs" />
+    <Compile Include="Controllers\V1\TaskWorkflowController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="InquiryProcessing\IUserByIdInquiryProcessor.cs" />
-    <Compile Include="InquiryProcessing\UserByIdInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\AllTasksInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\IAllTasksInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\IPagedDataRequestFactory.cs" />
+    <Compile Include="InquiryProcessing\ITaskByIdInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\PagedDataRequestFactory.cs" />
+    <Compile Include="InquiryProcessing\TaskByIdInquiryProcessor.cs" />
     <Compile Include="LinkServices\CommonLinkService.cs" />
     <Compile Include="LinkServices\ICommonLinkService.cs" />
+    <Compile Include="LinkServices\ITaskLinkService.cs" />
+    <Compile Include="LinkServices\IUserLinkService.cs" />
+    <Compile Include="LinkServices\TaskLinkService.cs" />
+    <Compile Include="LinkServices\UserLinkService.cs" />
+    <Compile Include="MaintenanceProcessing\AddTaskMaintenanceProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\CompleteTaskWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\IAddTaskMaintenanceProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\ICompleteTaskWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\IReactivateTaskWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\IStartTaskWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\ITaskUsersMaintenanceProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\IUpdateTaskMaintenanceProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\LocationLinkCalculator.cs" />
+    <Compile Include="MaintenanceProcessing\ReactivateTaskWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\StartTaskWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\TaskCreatedActionResult.cs" />
+    <Compile Include="MaintenanceProcessing\TaskUsersMaintenanceProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\UpdateTaskMaintenanceProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\ValidateTaskUpdateRequestAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\BasicAuthenticationMessageHandler.cs" />
     <Compile Include="Security\BasicSecurityService.cs" />
@@ -222,7 +239,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="MaintenanceProcessing\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kanban.Common\Kanban.Common.csproj">

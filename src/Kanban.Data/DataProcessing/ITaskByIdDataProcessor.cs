@@ -2,8 +2,8 @@
 
 namespace Kanban.Data.DataProcessing
 {
-	public interface ITaskByIdDataProcessor
-	{
-		Task GetTask(long id);
-	}
+    public interface ITaskByIdDataProcessor
+    {
+        Task GetTask(long taskId);
+    }
 }
