@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProcessing\IAllUsersDataProcessor.cs" />
     <Compile Include="DataProcessing\IUserByIdDataProcessor.cs" />
     <Compile Include="PagedDataRequest.cs" />
     <Compile Include="DataProcessing\ITaskByIdDataProcessor.cs" />

@@ -196,8 +196,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="InquiryProcessing\IAllUsersInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\IPagedDataRequestFactory.cs" />
     <Compile Include="InquiryProcessing\IUserByIdInquiryProcessor.cs" />
     <Compile Include="InquiryProcessing\ITaskByIdInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\AllUsersInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\PagedDataRequestFactory.cs" />
     <Compile Include="InquiryProcessing\UserByIdInquiryProcessor.cs" />
     <Compile Include="InquiryProcessing\TaskByIdInquiryProcessor.cs" />
     <Compile Include="LinkServices\CommonLinkService.cs" />
