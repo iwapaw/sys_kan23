@@ -17,7 +17,7 @@ namespace Kanban.Web.Api.Controllers.V1
         private readonly IAllUsersInquiryProcessor _allUsersInquiryProcessor;
         private readonly IPagedDataRequestFactory _pagedDataRequestFactory;
 
-        public UsersController(IUserByIdInquiryProcessor userByIdInquiryProcessor, IAllUsersInquiryProcessor allUsersInquiryProcessor)
+        public UsersController(IUserByIdInquiryProcessor userByIdInquiryProcessor, AllUsersInquiryProcessor allUsersInquiryProcessor, PagedDataRequestFactory pagedDataRequestFactory)
         {
             _userByIdInquiryProcessor = userByIdInquiryProcessor;
             _allUsersInquiryProcessor = allUsersInquiryProcessor;
